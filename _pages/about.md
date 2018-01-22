@@ -3,6 +3,7 @@ layout: single
 title: About
 permalink: /about/
 published: true
+type: pages
 ---
 ### WorldUnruled:~ root\# cat about.txt
 
