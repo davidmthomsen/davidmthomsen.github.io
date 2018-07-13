@@ -18,5 +18,4 @@ Running `nmap` revealed that the machine is running a web-server and port 80 is 
 This command will conduct a full TCP port scan and output the results to the nmap directory naming the files all-ports. This will take some time to complete.
 
 Accessing the web-server via a web browser reveals the machine is hosting a blog titled _Arrexel's Development Site_.
-
-<img src="assets/images/2018-07-12_22-43-17.jpg" class="align-center" alt"">
+<img src="assets/images/2018-07-12_22-51-55.jpg" class="align-center" alt"">
