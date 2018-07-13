@@ -11,4 +11,12 @@ To access the lab environment download your openvpn connection pack and run the 
 Once in the lab environment we can now start enumerating the machine. Starting with a simple `nmap` scan.
   `nmap -sC -sV -oA nmap/initial 10.10.10.68`
 This command will scan the top 1,000 ports against the machine. The `-sC` flag tells `nmap` to run the default scripts for any open ports found. The `-sV` flag tells `nmap` to enumerate versions for any open ports and the `-oA` flag tells `namp` to output in all formats to the nmap directory naming the files initial.
-<img src="_pages/2018-07-12_22-43-17.jpg" class="align-center" alt="">
+
+<img src="/assets/images/2018-07-12_22-43-17.jpg" class="align-center" alt-"">
+Running `nmap` revealed that the machine is running a web-server and port 80 is open. This is typical with most HtB machines. However, conducting a full port scan of all 65,535 ports is recommended.
+  `nmap -p- -oA nmap/all-ports 10.10.10.68`
+This command will conduct a full TCP port scan and output the results to the nmap directory naming the files all-ports. This will take some time to complete.
+
+Accessing the web-server via a web browser reveals the machine is hosting a blog titled _Arrexel's Development Site_.
+
+<img src="assets/images/2018-07-12_22-43-17.jpg" class="align-center" alt"">
