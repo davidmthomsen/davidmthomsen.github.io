@@ -20,10 +20,10 @@ title_separator          : "-"
 name                     : "David M. Thomsen"
 description              : "A blog to share what I have learned and what I am attempting to learn."
 url                      : #"https://davidmthomsen.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "davidmthomsen/davidmthomsen.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : "facebook" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
