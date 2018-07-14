@@ -1,3 +1,7 @@
+---
+layout: post
+title:  'HtB - Bashed Walkthrough'
+---
 ## HtB - Bashed Walkthrough
 <img src="/_pages/2018-07-12_23-17-16.jpg" class="align-left" alt="">
 
@@ -19,4 +23,6 @@ Running `nmap` revealed that the machine is running a web-server and port 80 is 
 This command will conduct a full TCP port scan and output the results to the nmap directory naming the files all-ports. This will take some time to complete.  
 
 Accessing the web-server via a web browser reveals the machine is hosting a blog titled _Arrexel's Development Site_.  
-<img src="/Users/davidmthomsen/scripts/davidmthomsen.github.io/assets/images/2018-07-12_22-51-55.jpg" class="align-center" alt="">
+<img src="/assets/images/2018-07-12_22-51-55.jpg" class="align-center" alt="">  
+
+This is interesting.
