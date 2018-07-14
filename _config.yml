@@ -5,7 +5,13 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-minimal_mistakes_skin    : "contrast" 
+minimal_mistakes_skin    : "contrast"
+
+# Collection Settings
+collections:
+  walkthroughs:
+    output: true
+    permalink: /:collection/:path/
 
 # Site Settings
 locale                   : "en-US"
@@ -13,14 +19,14 @@ title                    : "WorldUnruled"
 title_separator          : "-"
 name                     : "David M. Thomsen"
 description              : "A blog to share what I have learned and what I am attempting to learn."
-url                      : "https://davidmthomsen.github.io"
+url                      : #"https://davidmthomsen.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "davidmthomsen/davidmthomsen.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "facebook" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -31,21 +37,21 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : "dark"
 staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment."
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
+  allowedFields          : ['name', 'email', 'url', 'message']
+  branch                 : "master"
+  commitMessage          : "New comment."
+  filename               : comment-{@timestamp}
+  format                 : "yml"
+  moderation             : true
+  path                   : "/_data/comments/{options.slug}"
+  requiredFields         : ['name', 'email', 'message']
   transforms:
-    email                : # "md5"
+    email                : "md5"
   generatedFields:
     date:
-      type               : # "date"
+      type               : "date"
       options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 reCaptcha:
   siteKey                :
   secret                 :
@@ -87,9 +93,9 @@ author:
   name             : "David M. Thomsen"
   avatar           : "/assets/avatar.jpeg"
   bio              : "I am an Information Security Enthusiast, Blue Teamer, still feel like a novice and constantly striving to learn more.."
-  location         : "/dev/null"
+  location         : "127.0.0.1"
   email            :
-  uri              : "https://davidmthomsen.github.io"
+  uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
@@ -97,7 +103,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/davidmthomsen"
+  github           : "davidmthomsen"
   gitlab           :
   google_plus      :
   keybase          :
@@ -259,27 +265,11 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _recipes
-  - scope:
-      path: ""
-      type: recipes
-    values:
-      layout: single
-      author_profile: true
-      share: true
   # _pets
   - scope:
-      path: ""
-      type: pets
+      path: "_walkthroughs"
+      type: walkthrough
     values:
-      layout: single
+      layout: page
       author_profile: true
-      share: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: false
       share: true
