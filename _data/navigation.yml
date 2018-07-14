@@ -2,6 +2,12 @@
 main:
   - title: "About"
     url: /about/
+  - title: "Walkthroughs"
+    url: /Walkthroughs/
+  - title: "Blogs"
+    url: /Blogs/
+  - title: "Notes"
+    url: /Notes/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
